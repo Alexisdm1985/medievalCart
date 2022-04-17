@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
     <title>Practica</title>
 
@@ -17,19 +17,22 @@
         <article>
             <div class="card">
                 <h1 class="card-title">Arrow</h1>
-                <button class="card-btn" value="Arrow">Add to buy</button>
+                <p  class="card-price">$30</p>
+                <button data-price="30" class="card-btn" data-id="Arrow">Add to buy</button>
             </div>
         </article>
         <article>
             <div class="card">
                 <h1 class="card-title">Poisons</h1>
-                <button class="card-btn" value="Poisons">Add to buy</button>
+                <p  class="card-price">$1200</p>
+                <button data-price="1200" class="card-btn" data-id="Poisons">Add to buy</button>
             </div>
         </article>
         <article>
             <div class="card">
                 <h1 class="card-title">Daggers</h1>
-                <button class="card-btn" value="Daggers">Add to buy</button>
+                <p  class="card-price" value>$3550</p>
+                <button data-price="3550" class="card-btn" data-id="Daggers">Add to buy</button>
             </div>
         </article>
     </main>
@@ -38,11 +41,26 @@
         <ul class="list"></ul>
     </section>
 
+    <footer id="footer">
+        <!-- TemplateFooter -->
+        <template id="templateFooter">
+                <p class="total">Total: $ <span></span></p>
+                <button class="buy">Buy</button>
+        </template>
+    </footer>
+
     <!-- Template -->
     <template id="template">
         <li class="item">
-            <span class="itemName"></span>
             <span class="itemAmount"></span>
+            <span class="itemName"></span>
+        </li>
+        <li class="totalSection">
+            <p class="totalPrice">Total: $ <span></span> </p>
+            <div>
+                <button class="addBtn">Add</button>
+                <button class="removeBtn">Remove</button>
+            </div>
         </li>
     </template>
     
